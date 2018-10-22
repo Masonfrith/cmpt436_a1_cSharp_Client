@@ -6,7 +6,7 @@ namespace cmpt436_a1_cSharp_Client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!"); // test local repository commiting
         }
     }
 }
