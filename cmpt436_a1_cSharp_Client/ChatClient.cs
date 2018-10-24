@@ -30,7 +30,7 @@ namespace cmpt436_a1_cSharp_Client
             Console.WriteLine("Now connected to the server!");
 
             //lets test a first automatic communication without user input.
-
+            this.sout.AutoFlush = true;
             this.sout.WriteLine("Hi I am from cSharp! wut up?");
             this.fromServer = this.sin.ReadLine();
             Console.WriteLine("Server: " + this.fromServer);
