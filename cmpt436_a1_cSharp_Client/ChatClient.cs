@@ -36,7 +36,7 @@ namespace cmpt436_a1_cSharp_Client
             Console.WriteLine("Server: " + this.fromServer);
             this.sout.WriteLine("hah");
             this.fromServer = this.sin.ReadLine();
-            Console.WriteLine("Server: "_ + this.fromServer);
+            Console.WriteLine("Server: " + this.fromServer);
             this.sout.WriteLine("QUIT");
             this.fromServer = this.sin.ReadLine();
         }
