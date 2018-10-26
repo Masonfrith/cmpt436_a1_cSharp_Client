@@ -32,8 +32,20 @@ namespace cmpt436_a1_cSharp_Client
 
             this.sout.AutoFlush = true; // seems to be needed to make it work, not sure why, needs reading
 
-            //lets test a first automatic communication without user input.
-            this.autoChat();
+            Console.WriteLine("Press ENTER key to start chatting, any other to AutoChat.");
+            ConsoleKey key = Console.ReadKey(true).Key;
+            if (key.Equals(ConsoleKey.Enter)){
+                this.userChat(); // start user interact chat
+            }
+            else {
+                //lets test a first automatic communication without user input.
+                this.autoChat();
+            }
+        }
+
+        private void userChat()
+        {
+            Console.WriteLine("Ready for user to start chatting!");
         }
 
         private void autoChat()
