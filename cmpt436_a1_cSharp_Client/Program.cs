@@ -19,9 +19,11 @@ namespace cmpt436_a1_cSharp_Client
 
             //interaction loop will go here!
 
-            Console.WriteLine("Exiting Chat program.");
+            Console.WriteLine("Chatting done, press anykey to shutdown.");
 
             Console.ReadKey();
+
+            chatClient.shutDownClient();
         }
     }
 }
