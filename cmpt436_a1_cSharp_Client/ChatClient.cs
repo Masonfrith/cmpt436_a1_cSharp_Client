@@ -43,9 +43,23 @@ namespace cmpt436_a1_cSharp_Client
             }
         }
 
+        /***
+         * method which lets the user chat by sending a message, waiting for reply, then send again until
+         * user sends the 'QUIT' command to the server, then shutdown connection.
+         ***/
         private void userChat()
         {
+
+            this.userInput = "";
             Console.WriteLine("Ready for user to start chatting!");
+
+            // wait for user input, send input to server, wait for response, print response, if "QUIT" exit loop
+            while (!this.userInput.Equals("QUIT")){
+                this.userInput = Console.ReadLine();
+                this.sout.WriteLine(this.userInput);
+                this.fromServer = this.sin.ReadLine();
+                Console.WriteLine(this.fromServer);
+            }
         }
 
         private void autoChat()
